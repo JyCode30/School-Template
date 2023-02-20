@@ -1,0 +1,604 @@
+<html>
+<head>
+<style type="text/css">
+*{
+   font-family:sans-serif;
+   margin:0;
+   padding:0;
+   list-style:none;
+   text-decoration:none;
+   box-sizing:border-box;
+}
+html{
+   padding-left:0rem;
+   overflow-x:hidden;
+   min-height:1000px;
+   scroll-behavior:smooth;
+}
+.wrapper{
+   background:url(/storage/emulated/0/beach.jpg) no-repeat;
+   width:100%;
+   margin-top:-10px;
+}
+nav{
+   width:100%;
+   position:fixed;
+   height:60px;
+   background:#0005;
+   line-height:50px;
+   display:flex;
+   align-items:center;
+   justify-content:space-between;
+   padding:15px;
+   top:0;
+   transition:0.2s;
+}
+nav.sticky{
+   background:#f1f1f1;
+   padding:20px;
+   position:fixed;
+   top:0;
+   box-shadow:0 5px 5px rgba(0,0,0,0.3);
+   z-index:1000;
+}
+nav.sticky .img
+{
+    color:#000;
+}
+nav.sticky ul li a{
+  color:#000;
+}
+nav.sticky .toggle::before,
+nav.sticky .toggle::after{
+   background:#000;
+}
+nav.sticky .toggle{
+   border:1px solid #000;
+}
+
+nav .img{
+    color:white;
+    font-size:1.6rem;
+}
+nav ul{
+   float:right;
+   margin:;
+   margin-left:2rem;
+   opacity:100;
+}
+nav ul li{
+  display:inline-block;
+  margin-left:0.5rem;
+}
+nav ul li a{
+  color:#fff;
+  padding:2px;
+}
+nav ul li a:hover{
+  color:#ff7200;
+}
+nav .toggle{
+   display:none;
+}
+.section{
+  width:100%;
+  margin:auto;
+  overflow:hidden;
+  margin-top:10px;
+  padding:2rem 0rem;
+  position:relative;
+}
+.section h1{
+  color:#fff;
+  line-height:50px;
+  margin-top:5rem;
+  max-width:900px;
+}
+.section p{
+   color:#fff;
+   opacity:0.5;
+} 
+.btn-1{
+  background:orangered;
+  padding:0.7rem;
+  color:#fff;
+  font-size:1rem;
+  border:none;
+  border-radius:5px;
+}
+.btn-1 a{
+  color:#fff;
+}
+.features{
+   margin-top:4%;
+   margin-bottom:3%;
+} 
+.features button{
+   padding:0.7rem 1rem;
+   margin-right:1rem;
+   margin-top:0.5rem;
+   font-size:1.2rem;
+   opacity:0.7;
+   border:none;
+   color:#222;
+   outline:none;
+   border-radius:5px;
+}
+showcase{
+   display:flex;
+   flex-wrapp:wrapp;
+   align-items:center;
+   flex-direction:column;
+}
+showcase h1{
+   margin-top:5%;
+   margin-bottom:5%;
+   text-align:center;
+}
+.courses{
+  display:flex;
+  align-items:center;
+  flex-wrapp:wrapp;
+  justify-content:center;
+  padding:30px 10px;
+  margin:10px;
+}
+.courses h3{
+  margin:2rem 0rem;
+  font-size:1.6rem;
+ 
+}
+.courses img{
+   width:250px;
+   border-radius:4px;
+   border:2px solid #000;
+}
+.apply{
+   margin-top:4%;
+   background:orangered;
+   padding:0.7rem 0.5rem;
+   opacity:0.9;
+   border:none;
+   border-radius:5px; 
+}
+.apply a{
+   color:#fff;
+   font-size:1rem;
+}
+.Down {
+   width:100%;
+   height:40%;
+   display:flex;
+   display:flex;
+   background:none;
+   flex-direction:column;
+   align-items:center;
+   justify-content:center;
+   padding:40px 10px;
+}
+.Down h1{
+   text-align:center;
+   margin-top:20px;
+   
+}
+.Down .container{
+   height:;
+   display:flex;
+   align-items:center;  
+}
+.Down .container .box{
+   background:white;
+   margin:10px;
+   padding:10px;
+   border-radius:5px;
+   box-shadow:2px 3px 10px 3px rgba(0,0,0,0.3);
+}
+.container .box h3{
+  font-size:1.5rem;
+  margin-top:1rem;
+  margin-bottom:1rem;
+}
+.container .box p{
+   font-size:1.1rem;
+   color:#444;
+   margin-bottom:0.6rem;
+}
+.container .box small{
+   color:#555;
+   font-size:0.9rem;
+}
+.container .box button{
+   border:none;
+   background:orangered;
+   padding:15px;
+   margin:10px 5px;
+   border-radius:5px;
+}
+.container .box button a{
+    color:#fff;
+    font-size:1rem;
+}
+.contact{
+   width:100%;
+   height:50%;
+   background:url(/storage/emulated/0/beach.jpg);
+   background-position:left;
+   align-items:center;
+   display:flex;
+}
+.contact form{
+   background:#ffffff;;
+   display:flex;
+   flex-flow:column;
+   padding:15px;
+   width:60%;
+   margin-left:15px;
+   border-radius:10px;
+   box-shadow: 3px 5px 10px rgba(0,0,0,0.3);
+}
+.contact form h4{
+   color:#333;
+   text-align:center;
+   margin:0rem;
+}
+.contact form .post{
+   margin:10px 0 3px;
+   padding:8px;
+   border-radius:5px;
+   border:1px solid #333;
+   resize:none;
+   outline:none;
+}
+.contact form input[type="submit"]{
+    background:orangered;
+    border:none;
+    color:#fff;
+    font-size:1rem;
+    padding:15px;
+}
+.top{
+   position:fixed;
+   bottom:2rem;
+   right:2rem;
+   display:none;
+   transition: ;
+}
+.top.active{
+   display:block;
+}
+.top .top-btn{
+   background:orangered;
+   padding:0.5rem;
+   border-radius:0.5rem;
+   color:#f2f2f2;
+   font-size:1.2rem;
+   border:none;  
+   outline:none;
+}
+
+footer{
+  background:#333;
+  color:#fff;
+  text-align:center;
+  padding:1.2rem;
+  margin-top:4%;
+  margin-bottom:0rem;
+}
+
+@media screen and (max-width:555px){
+     nav {
+        align-items:center;
+        display:flex;
+        justify-content:space-between;
+     }
+     nav ul {
+         display:flex;
+         position:fixed;
+         z-index:1000;
+         height:90%;
+         width:60%;
+         left:-100%;
+         padding-bottom:30px;
+         top:3.7rem;
+         margin:0;
+         align-items:center;
+         justify-content:space-around;
+         background:whitesmoke;
+         flex-flow:column;
+         transition:0.5s;
+     }
+     nav ul.active{
+         left:0%;
+         opacity:1000;
+     }
+     nav ul li a{
+        margin:15px;
+        color:#000;
+        font-size:1.2rem;
+        font-weight:500;
+     }
+     nav .toggle{
+        display:flex;
+     }
+     .toggle{
+     posotion:absolute;
+     width:2.5rem;
+     height:2.5rem;
+     border-radius:30px;
+     background:transparent;
+     margin-top:0%;
+     cursor:pointer;
+     flex-direction:column;
+     margin:0 10px;
+     display:flex;
+     border:1px solid #fff;
+     align-items:center;
+     justify-content:center;
+     transition:0.5s;
+     box-shadow: 2px 3px 5px rgba(0,0,0,0.4); 
+     }
+    .toggle::before{
+     position:absloute;
+     content:'';
+     width:26px;
+     border-radius:5px;
+     height:5px;
+     background:#f2f2f2;
+     transform:translateY(-5px);
+     box-shadow: 2px 3px 5px rgba(0,0,0,0.4);
+     transition:0.5s;
+     }
+     .toggle::after{
+     position:absloute;
+     content:'';
+     width:26px;
+     border-radius:5px;
+     height:5px;
+     margin-top:-0.5rem;
+     background:#f2f2f2;
+     box-shadow: 2px 3px 5px rgba(0,0,0,0.4);
+     transform:translateY(5px);
+     transition:0.5s;
+     }
+     nav.active .toggle::before{
+     transform:translateY(-1px) rotate(-405deg);
+     }
+     nav.active .toggle::after{
+     transform:translateY(2.5px) rotate(225deg);
+     }
+     .section{
+       text-align:center;
+       height:40%;
+       display:flex;
+       align-items:center;
+       flex-direction:column;
+       justify-content:space-between;
+     }
+     .section h1{
+       font-size:1.9rem;
+     }
+     .section p{
+        font-size:1rem;
+        margin-bottom:0.5rem;
+     }
+     .features{
+        display:inline;
+        flex-wrap:;
+        position:relative;
+        align-items:center;
+        justify-content:center;
+        flex-direction:column;
+     }
+     .features button{
+     padding:0.7rem 1rem;
+     margin:5px 5px;
+     margin-top:0.5rem;
+     width:;
+     font-size:1.2rem;
+     opacity:0.7;
+     border:none;
+     color:#222;
+     outline:none;
+     border-radius:5px;
+     }
+     .features button:hover{
+         background:#ff7200;
+         color:#fff;
+     }
+     showcase{
+       text-align:center;
+     }
+     showcase h1{
+     margin-top:3rem;
+     margin-bottom:0rem;
+     }
+     .courses{
+        flex-direction:column;
+        width:100%;
+        padding:20px 7px;
+     }
+     .courses h3{
+        margin:0.6rem 0rem;
+     }
+     .courses img{
+       width:330px;
+     }
+     .courses .apply{
+       width:95%;
+       outline:none;
+       padding:1rem;
+     }
+     .Down{
+        height:70%;
+     }
+     .Down h1{
+        margin-top:0rem;
+        margin-bottom:1rem;
+     }
+     .Down .container{
+        diaplay:flex;
+        align-items:center;
+        justify-content:center;
+        flex-flow:column;
+     }
+     .Down .container .box{
+        text-align:center;
+     }
+     .contact{
+       background-position:right;
+       height:60%;
+       margin:0rem;
+     }
+     .contact form{
+        width:100%;
+        margin:20px;
+     }
+     .contact form h4{
+        margin:0rem 0rem;
+        font-size:1.2rem;
+     }
+     footer{
+         margin:0rem;
+     }
+     footer p span{
+       opacity:0.5;
+     }
+}
+
+</style>
+</head>
+<body>
+<div class="wrapper">
+<nav id="Nav" class="">
+<h2 class="img">Shool</h2>
+<ul class="" id="ul">
+<li><a href="#">Home</a></li>
+<li><a href="#down">About</a></li>
+<li><a href="#courses">Courses</a></li>
+<li><a href="#">Pages</a></li>
+<li><a href="#">Blog</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+<div class="toggle"></div>
+</nav>
+<div class="section">
+<h1> We ensure a better education <br>
+for a better world</h1>
+<p> join school now and don't miss the fun</p>
+<button class="btn-1"><a href="#">Get Started</a></button>
+<div class="features">
+<button>Join Online Classes</button>
+<button>Bridge Courses</button>
+<button> Huge</button>
+<button>Practicals</button>
+</div>
+</div>
+</div>
+<showcase id="courses">
+<h1>Popular Courses We Offer</h1>
+<div class="courses">
+<div class="cs">
+<h3>Computer Science</h3>
+<img src="/storage/emulated/0/pictures/facebook/Cs.jpg" width="50%" alt="cs"><br>
+<button class="apply"><a href="#">Apply Now</a></button>
+</div>
+<div class="Coe">
+<h3>Computer Engineering</h3>
+<img src="/storage/emulated/0/pictures/facebook/Coe.jpg" width="50%" alt="Coe"><br>
+<button class="apply"><a href="#">Apply Now</a></button>
+</div>
+<div class="Slt">
+<h3> Lab Technics</h3>
+<img src="" width="50%" alt="Slt"><br>
+<button class="apply"><a href="#">Apply Now</a></button>
+</div>
+<div class="Bam">
+<h3>Bussiness Admin </h3>
+<img src="" width="50%" alt="Bam"><br>
+<button class="apply"><a href="#">Apply Now</a></button>
+</div>
+<div class="Act">
+<h3>Acountant </h3>
+<img src="" width="50%" alt="Act"><br>
+<button class="apply"><a href="#">Apply Now</a></button>
+</div>
+<div class="EE">
+<h3>Electrical Enginer </h3>
+<img src="" width="50%" alt="EE"><br>
+<button class="apply"><a href="#">Apply Now</a></button>
+</div>
+<div class="ME">
+<h3>Mechanical Enginer </h3>
+<img src="" width="50%" alt="ME"><br>
+<button class="apply"><a href="#">Apply Now</a></button>
+</div>
+<div class="Sv">
+<h3>Cevil Enginer </h3>
+<img src="" width="50%" alt="Sv"><br>
+<button class="apply"><a href="#">Apply Now</a></button>
+</div>
+</div>
+</showcase>
+<div class="Down" id ="down">
+<h1>Some Online Classes</h1>
+<div class="container">
+<div class="box">
+<h3>Computer Secience</h3>
+ <p> learn to Code as computer secience student </p>
+ <small> school is very important now adays</small>
+ <button><a href="#">Our Online Class</a></button>
+</div>
+<div class="box">
+<h3>Computer Engineering </h3>
+ <p> learn Computer repires etc..</p>
+ <small> school is very important now adays</small>
+ <button><a href="#">Our Online Class</a></button>
+</div>
+<div class="box">
+<h3>Building Engineering </h3>
+ <p> Don't be a quack building engineer</p>
+ <small> school is very important now adays</small>
+ <button><a href="#">Our Online Class</a></button>
+</div>
+</div>
+</div>
+<div class="contact" id="contact">
+<form id="Send">
+<h4>Email the School Management</h4>
+<input type="text" name="email" class="post" id="email" placeholder="Enter Your Reg Number" required>
+<textarea cols="11" rows="5" class="post">
+</textarea>
+<input type="Submit" class="post" value="Request ✓">
+</form>
+</div>
+<div class="top" id="top">
+<a href="#"><button class="top-btn">Top</button></a>
+</div>
+<footer>
+<p> Copyright &copy; 2023, <span>Jesse</span></p>
+</footer>
+<script type="text/javascript">
+   var Toggle = document.querySelector('.toggle');
+   var Ul =  document.getElementById('ul');
+   var Nav = document.getElementById('Nav');
+   var Top = document.getElementById('top')
+   
+     Toggle.onclick = function(){
+         Ul.classList.toggle('active');
+         Nav.classList.toggle('active');
+     }
+     window.onscroll = function(){
+        
+        if(window.scrollY > 0){
+        Nav.classList.add("sticky");
+        Top.classList.add("active");
+        }else{
+          Nav.classList.remove("sticky");
+          Top.classList.remove("active");
+        }
+     }
+     
+  
+</script>
+</body>
+</html>
